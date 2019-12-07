@@ -1,0 +1,60 @@
+﻿<Page x:Class="SystemSellBuy.PagesBuy.PageMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:SystemSellBuy.PagesBuy"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageMenu">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <materialDesign:Card HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Margin="0,20,0,0" Panel.ZIndex="1" Width="780" Grid.Column="1">
+            <Menu 
+    materialDesign:MenuAssist.TopLevelMenuItemHeight="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type materialDesign:Card}},Path=ActualHeight}" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="289">
+                <Menu.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.511"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Menu.RenderTransform>
+                <MenuItem
+      Header="Закупка">
+                    <MenuItem
+        Header="Добавить" Click="MenuItem_Click" />
+                    <MenuItem
+        Header="Изменить" />
+                    <MenuItem
+        Header="Удалить" />
+                </MenuItem>
+                <MenuItem
+      Header="История">
+                    <MenuItem
+        Header="За всё время" Click="MenuItem_Click_1" />
+                    
+                </MenuItem>
+                <MenuItem
+      Header="Профиль">
+                    <MenuItem
+        Header="Редактировать Профиль" Click="MenuItem_Click_3" />
+                    <MenuItem
+        Header="Добавить Профиль" Click="MenuItem_Click_2" />
+                    
+                </MenuItem>
+            </Menu>
+        </materialDesign:Card>
+    </Grid>
+</Page>

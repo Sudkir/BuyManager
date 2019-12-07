@@ -1,0 +1,25 @@
+﻿<Window x:Class="SystemSellBuy.PagesBuy.WindowForPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemSellBuy.PagesBuy" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="WindowForPage" MinHeight="500" MinWidth="1000" Height="600" Width="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center">
+             <TextBlock
+  Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+  Text="System Sell Buy" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" FontFamily="Arial Black" FontWeight="Normal" TextDecorations="{x:Null}" />
+        <materialDesign:PackIcon Kind="BasketCheckOutline" Height="64" Width="64" HorizontalAlignment="Right"   />
+        </StackPanel>
+       
+        <Frame  Name="MainFrame"  Content="Frame"   Grid.Row="1" NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+</Window>
